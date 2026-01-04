@@ -24,7 +24,10 @@ const ClickSpark = ({
     let resizeTimeout;
 
     const resizeCanvas = () => {
-      const { width, height } = parent.getBoundingClientRect();
+      const width = parent.clientWidth;
+      
+      const height = parent.scrollHeight;
+      
       if (canvas.width !== width || canvas.height !== height) {
         canvas.width = width;
         canvas.height = height;
